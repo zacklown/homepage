@@ -56,7 +56,7 @@ export default function HomePage() {
             <ExternalLinkIcon />
           </a>
         </nav>
-        <a className="button button-primary" href="/Zack%20Lown%20resume.pdf" download>
+        <a className="button button-primary header-resume-link" href="/Zack%20Lown%20resume.pdf" download>
           Download resume
         </a>
       </header>

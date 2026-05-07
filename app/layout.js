@@ -12,7 +12,7 @@ const newsreader = Newsreader({
 });
 
 export const metadata = {
-  title: "Homepage | Project Index",
+  title: "Zack Lown | Homepage",
   description: "A refined Next.js homepage for showcasing products, experiments, and case studies."
 };
 
