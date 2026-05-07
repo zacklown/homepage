@@ -1,14 +1,15 @@
-import adsbImage from "../images/adsb.png";
-import capstoneImage from "../images/capstone.png";
-import fluxImage from "../images/flux.png";
-import metadataImage from "../images/metadata.png";
-import srchImage from "../images/srch.png";
+import adsbImage from "../images/adsb.jpeg";
+import capstoneImage from "../images/capstone.jpeg";
+import fluxImage from "../images/flux.jpeg";
+import metadataImage from "../images/metadata.jpeg";
+import srchImage from "../images/srch.jpeg";
+import planeImage  from "../images/plane.png";
 
 export const socialLinks = {
   github: "https://github.com/zacklown",
   linkedin: "https://www.linkedin.com/in/zack-lown/",
   personalBlog: "https://blog.zacklown.com",
-  professionalBlog: "zacklown.github.com"
+  professionalBlog: "https://zacklown.github.io"
 };
 
 export const projects = [
@@ -17,6 +18,7 @@ export const projects = [
     eyebrowLabel: "metadata.zacklown.com",
     eyebrowHref: "https://metadata.zacklown.com",
     title: "Metadata health Site",
+    repoHref: "https://github.com/zacklown/health",
     description:
       "A wikipedia-stype site used for organize my own personal research on topics in a searchable and UI-friendly way.",
     why:
@@ -45,6 +47,7 @@ export const projects = [
     eyebrowLabel: "flux.zacklown.com",
     eyebrowHref: "https://flux.zacklown.com",
     title: "Flux Image and Doc Editor",
+    repoHref: "https://github.com/zacklown/flux",
     description:
       "This is a UI-heavy project that does the basic functions of an image and document editor with a focus on simplicity after frusteration with the bloat of existing products.",
     why:
@@ -59,6 +62,7 @@ export const projects = [
     eyebrowLabel: "capstone.zacklown.com",
     eyebrowHref: "https://capstone.zacklown.com",
     title: "Adversarial Attack Face Authentication System",
+    repoHref: "https://github.com/orgs/AI-Authentication/repositories",
     description:
       "A face authentication system designed to show how adversarial attacks can be used to bypass biometric security measures, built as my senior capstone project for my Bachelors in Computer Engineering.",
     why:
@@ -73,29 +77,28 @@ export const projects = [
     eyebrowLabel: "srch.zacklown.com",
     eyebrowHref: "https://srch.zacklown.com",
     title: "Socially Responsible Computing Handbook",
+    repoHref: "https://github.com/manoa-srch",
     description:
-      "An internal operations interface for monitoring events, triaging incidents, and keeping teams aligned around system health.",
+      "A database for instructors to find and share resources for teaching socially responsible computing topics in their classrooms, designed to make it easier for educators to incorporate these important topics into their curriculum.",
     why:
-      "Operations teams needed a single view for alerts, status, and response context so they could move faster during incidents and reduce handoff friction.",
+      "In collaboration with Brown Univerity, my team in a software engineering course designed this project to address the need for more accessible resources on socially responsible computing..",
     how:
-      "I framed the product around prioritization: clear event grouping, escalation context where it matters, and layouts optimized for scanning under pressure.",
-    tags: ["Monitoring", "Dashboards", "Systems"],
+      "Using a Next.js frontend and a prisma/PostgreSQL backend, we created a robust admin and user auth flow hosted on Vercel and Neon db. Collaboration was a big part of this project as seen from the github repo tree.",
+    tags: ["Vercel", "Full-Stack", "Github Collaboration", "Ethics"],
     image: srchImage
   },
   {
-    slug: "briefcase-os",
-    eyebrowLabel: "Project link",
-    eyebrowHref: "https://example.com/briefcase-os",
-    title: "Briefcase OS",
+    slug: "plane",
+
+    title: "AIAA Fixed Wing Drone ",
     description:
-      "A personal command center for proposals, project notes, and delivery checklists, designed to reduce context switching.",
+      "As a VIP project for my Bachelors, I worked with a team intergrating automous flight software into a custom-built drone using ardupilot.",
     why:
-      "Independent operators need a system that keeps planning, delivery, and communication close together instead of spread across disconnected tools.",
+      "The need for the development of the automous drone function came from the limiutions set in the competion guidelines. I was in charge of drone avionics working alongside a team of all Mechanical Engineers.",
     how:
-      "I designed it as a practical workspace layer with repeatable templates, tight navigation, and just enough structure to support daily execution.",
-    tags: ["Productivity", "Design systems", "Workflow"],
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBufL3pxjoIEyEZ9RGMQYITWo7zUqq5XxHWzI0SCz_E19pc380WCZXiufsnACyZu11hbPMNk6l10YudRPBeFA3NBsocXkickDkUselQH6SPnLx3dLhnz0L0DxTdVJ-MWnf_Xl_wAahHEKnbiZhNzVVfYOkJXlKoFLg6MRMBq-juyNH3Vab7_qFbLuAmDRgGGzNcRdFNbmH-8W6FZZOhtEB2VDjN6QcJwjY20tR050l2O3i5H7U9lWpgx_daV934qiCDI7aVXllWP4ni"
+      "Ardupilot is a robust and open-source software for controlling drones. We used a pixhawk flight controller and custom-built the drone frame and avionics. The software was intergrated with the hardware and tested extensively to ensure reliable flight.",
+    tags: ["Hardware-Software", "Design Systems", "Soldering", "CAD"],
+    image: planeImage
   }
 ];
 

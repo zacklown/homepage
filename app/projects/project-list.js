@@ -3,14 +3,6 @@
 import { useEffect } from "react";
 import Image from "next/image";
 
-function ArrowUpRightIcon() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 24 24">
-      <path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" />
-    </svg>
-  );
-}
-
 export default function ProjectList({ projects }) {
   useEffect(() => {
     const scrollToHashProject = () => {
@@ -49,33 +41,39 @@ export default function ProjectList({ projects }) {
             />
           </div>
           <div className="project-body project-body-wide">
-            {project.eyebrowHref && project.eyebrowLabel ? (
-              <a
-                className="project-eyebrow-link"
-                href={project.eyebrowHref}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {project.eyebrowLabel}
-              </a>
+            {project.eyebrowLabel || project.repoHref || project.eyebrowHref ? (
+              <div className="project-meta">
+                {project.eyebrowLabel ? (
+                  <span className="project-eyebrow">{project.eyebrowLabel}</span>
+                ) : (
+                  <span />
+                )}
+                <div className="project-links">
+                  {project.repoHref ? (
+                    <a
+                      className="button button-secondary button-small"
+                      href={project.repoHref}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Go to Repo
+                    </a>
+                  ) : null}
+                  {project.eyebrowHref ? (
+                    <a
+                      className="button button-primary button-small"
+                      href={project.eyebrowHref}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Go to Site
+                    </a>
+                  ) : null}
+                </div>
+              </div>
             ) : null}
             <div className="project-topline">
               <h3>{project.title}</h3>
-              {project.eyebrowHref ? (
-                <a
-                  className="icon-link"
-                  href={project.eyebrowHref}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Open ${project.title}`}
-                >
-                  <ArrowUpRightIcon />
-                </a>
-              ) : (
-                <span className="icon-link" aria-hidden="true">
-                  <ArrowUpRightIcon />
-                </span>
-              )}
             </div>
             <p>{project.description}</p>
             <ul className="tag-list" aria-label={`${project.title} technologies`}>

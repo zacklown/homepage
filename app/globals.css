@@ -422,9 +422,15 @@ svg {
   padding: 1.75rem;
 }
 
-.project-eyebrow-link {
-  display: inline-flex;
+.project-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   margin-bottom: 0.85rem;
+}
+
+.project-eyebrow {
   color: var(--primary);
   font-size: 0.8rem;
   font-weight: 800;
@@ -432,8 +438,12 @@ svg {
   text-transform: uppercase;
 }
 
-.project-eyebrow-link:hover {
-  color: var(--primary-deep);
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+  justify-content: flex-end;
 }
 
 .project-topline {
@@ -485,6 +495,9 @@ svg {
 }
 
 .project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
   margin-top: 1.25rem;
 }
 
@@ -578,6 +591,15 @@ svg {
   .project-card-wide,
   .project-detail-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-links {
+    justify-content: flex-start;
   }
 
   .project-image-wide {

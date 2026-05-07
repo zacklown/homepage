@@ -153,9 +153,25 @@ export default function HomePage() {
               <div className="project-body">
                 <div className="project-topline">
                   <h3>{project.title}</h3>
-                  <span className="icon-link" aria-hidden="true">
-                    <ArrowUpRightIcon />
-                  </span>
+                  {project.eyebrowHref ? (
+                    <a
+                      className="icon-link"
+                      href={project.eyebrowHref}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Open ${project.title}`}
+                    >
+                      <ArrowUpRightIcon />
+                    </a>
+                  ) : (
+                    <Link
+                      className="icon-link"
+                      href={`/projects#${project.slug}`}
+                      aria-label={`Read more about ${project.title}`}
+                    >
+                      <ArrowUpRightIcon />
+                    </Link>
+                  )}
                 </div>
                 <p>{project.description}</p>
                 <ul className="tag-list" aria-label={`${project.title} technologies`}>
