@@ -8,7 +8,7 @@ import planeImage  from "../images/plane.png";
 export const socialLinks = {
   github: "https://github.com/zacklown",
   linkedin: "https://www.linkedin.com/in/zack-lown/",
-  personalBlog: "https://blog.zacklown.com",
+  personalBlog: "#",
   professionalBlog: "https://zacklown.github.io"
 };
 
