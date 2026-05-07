@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import profileImage from "../images/me_full.jpg";
+import SiteHeader from "./site-header";
 import { expertise, projects, socialLinks, stats } from "./site-data";
 
 function ArrowUpRightIcon() {
@@ -40,26 +41,7 @@ export default function HomePage() {
 
   return (
     <main className="page-shell">
-      <header className="site-header">
-        <a className="brand" href="#top">
-          Zack Lown
-        </a>
-        <nav className="site-nav" aria-label="Primary">
-          <Link href="/">Home</Link>
-          <Link href="/projects">Projects</Link>
-          <a className="nav-external" href={socialLinks.personalBlog} target="_blank" rel="noreferrer">
-            Personal blog
-            <ExternalLinkIcon />
-          </a>
-          <a className="nav-external" href={socialLinks.professionalBlog} target="_blank" rel="noreferrer">
-            Professional blog
-            <ExternalLinkIcon />
-          </a>
-        </nav>
-        <a className="button button-primary header-resume-link" href="/Zack%20Lown%20resume.pdf" download>
-          Download resume
-        </a>
-      </header>
+      <SiteHeader brandHref="/" brandLabel="Zack Lown" />
 
       <section className="hero section" id="top">
         <div className="hero-copy">
