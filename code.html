@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio | Professional Showcase</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f8f9fa",
+                        "surface": "#f8f9fa",
+                        "on-background": "#191c1d",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#002116",
+                        "on-surface": "#191c1d",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2e3132",
+                        "surface-variant": "#e1e3e4",
+                        "surface-tint": "#1b6b51",
+                        "on-surface-variant": "#3f4944",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#823f3a",
+                        "surface-container": "#edeeef",
+                        "secondary-fixed": "#dce2f7",
+                        "secondary": "#575e70",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-highest": "#e1e3e4",
+                        "primary-fixed-dim": "#8bd6b6",
+                        "tertiary-fixed": "#ffdad6",
+                        "outline-variant": "#bec9c2",
+                        "surface-container-high": "#e7e8e9",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#8bd6b6",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#c0c6db",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#8bd6b7",
+                        "primary": "#004532",
+                        "background": "#f8f9fa",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-secondary-fixed": "#141b2b",
+                        "tertiary-fixed-dim": "#ffb3ac",
+                        "on-tertiary-fixed": "#3b0908",
+                        "on-secondary-fixed-variant": "#404758",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#a6f2d1",
+                        "surface-container-low": "#f3f4f5",
+                        "secondary-container": "#d9dff5",
+                        "tertiary": "#652925",
+                        "on-primary-fixed-variant": "#00513b",
+                        "outline": "#6f7973",
+                        "on-tertiary-container": "#ffb4ad",
+                        "on-tertiary-fixed-variant": "#73332f",
+                        "primary-container": "#065f46",
+                        "on-secondary-container": "#5c6274"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "1.5rem",
+                        "section-padding": "8rem",
+                        "unit": "4px",
+                        "container-max": "1280px",
+                        "gutter": "2rem",
+                        "stack-sm": "0.5rem",
+                        "stack-lg": "3rem"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Manrope"],
+                        "label-sm": ["Manrope"],
+                        "h1": ["Newsreader"],
+                        "h3": ["Newsreader"],
+                        "display": ["Newsreader"],
+                        "body-lg": ["Manrope"],
+                        "h2": ["Newsreader"]
+                    },
+                    "fontSize": {
+                        "body-md": ["1rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["0.875rem", {"lineHeight": "1.5", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "h1": ["3rem", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "h3": ["1.5rem", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                        "body-lg": ["1.125rem", {"lineHeight": "1.7", "fontWeight": "400"}],
+                        "h2": ["2.25rem", {"lineHeight": "1.3", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #f8f9fa;
+            color: #191c1d;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .card-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center h-20 px-8 max-w-container-max mx-auto bg-surface-bright/80 backdrop-blur-md shadow-sm">
+<div class="font-h3 text-h3 text-on-surface">Portfolio</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary pb-1" href="#bio">Bio</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors duration-200" href="#projects">Projects</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors duration-200" href="#skills">Skills</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-on-primary px-6 py-2 rounded font-label-sm hover:opacity-90 transition-all active:scale-[0.98]">
+                Contact Me
+            </button>
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="mail">mail</span>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-8 py-section-padding flex flex-col md:flex-row items-center gap-16" id="bio">
+<div class="flex-1 space-y-stack-md">
+<h1 class="font-display text-display text-on-surface">Building digital experiences with <span class="text-primary italic">precision</span>.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    I am a software architect and designer specializing in high-performance web applications. My work bridges the gap between complex technical requirements and elegant, user-centric interfaces.
+                </p>
+<div class="flex gap-stack-md pt-stack-sm">
+<a class="flex items-center gap-2 px-6 py-3 bg-primary text-on-primary rounded font-label-sm card-lift" href="#">
+<span class="material-symbols-outlined" data-icon="code">code</span> GitHub
+                    </a>
+<a class="flex items-center gap-2 px-6 py-3 border border-primary text-primary rounded font-label-sm card-lift" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span> LinkedIn
+                    </a>
+</div>
+</div>
+<div class="flex-1">
+<div class="aspect-square rounded-full overflow-hidden border-[12px] border-surface-container shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a creative director in a bright, minimalist studio setting. The lighting is soft and natural, emphasizing a calm and competent demeanor. The background is a clean, neutral off-white that aligns with the portfolio's modern corporate aesthetic. The overall mood is sophisticated, intellectual, and authoritative, using a high-key color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk-k_A8I-kRTCH98LzlUMKiB675tbiI3fachhLLXt8D5r_6Uk_FpftgnDwc5pJZW7dZVifM6PiyW0tJooceIcXtiKcO1O4SZ-a6SVD5b18WjuQy2EwpZ9U9zNwc-SqyAibPUMyn1XEUBowzvk7WdWf-C9bY5XdhI1CowteDAG8vV0qzH2gF5ETGooDTqySC10MxkAfyBFmLfxwyQKIQ0kTWXdlN6PTAjVkmKBqZie8TE2siFwJqzOU2j9H47l6QSC3ofDgAjXnQhnH"/>
+</div>
+</div>
+</section>
+<!-- Project Gallery -->
+<section class="bg-surface-container-low py-section-padding" id="projects">
+<div class="max-w-container-max mx-auto px-8">
+<div class="mb-stack-lg">
+<h2 class="font-h2 text-h2 text-on-surface mb-2">Selected Projects</h2>
+<div class="h-1 w-20 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Project 1 -->
+<div class="bg-surface-container-lowest border border-surface-variant p-6 rounded-lg card-lift flex flex-col h-full">
+<div class="aspect-video mb-6 overflow-hidden rounded">
+<img class="w-full h-full object-cover" data-alt="A sleek, data-rich dashboard interface displayed on a high-resolution monitor. The design features a minimalist light theme with emerald green accents for data visualizations and buttons. Soft ambient shadows give the interface a sense of depth against a clean office environment background. The composition is precise and professional, reflecting high-end corporate software design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEPomoS3NzaKx9YMwdY2HNomPM6TMbd0WnNjSG-xBu6lFa2kmfEyTHVxTjzm_LSSxT7L057pPk_kG_ySc_J5ZcSUst0djGQKRPQAPTED9AMTq-uVA32sIeVg_-Db5bcrA6FHSfdhG3DlSrR4sdhNGt5lVfZhXkrTEnOO_aOSouYtOqRGVMZI0x2L9RvNXDtCjsNm2k93pc2zuzE9AYvZFRCzWqT-WqL3TdnKlcEwByEY8ZBcyEAYIzP0Ecuh3RgJ1uM0EFKhUfHJh5"/>
+</div>
+<h3 class="font-h3 text-h3 mb-3">FinanceTracker Pro</h3>
+<p class="text-on-surface-variant mb-6 flex-grow">A sophisticated asset management platform designed for institutional investors, focusing on real-time data visualization and risk assessment.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-primary font-label-sm rounded-full">React</span>
+<span class="px-3 py-1 bg-surface-container text-primary font-label-sm rounded-full">TypeScript</span>
+<span class="px-3 py-1 bg-surface-container text-primary font-label-sm rounded-full">D3.js</span>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="bg-surface-container-lowest border border-surface-variant p-6 rounded-lg card-lift flex flex-col h-full">
+<div class="aspect-video mb-6 overflow-hidden rounded">
+<img class="w-full h-full object-cover" data-alt="An elegant mobile application mockup for an architectural firm. The screen shows a minimalist project gallery with large, high-quality images and refined serif typography. Emerald green highlights are used for navigation active states. The mood is curated and artistic, emphasizing a quiet authority and meticulous attention to detail in design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAayYEW1KtgNAsbV0v70M9E6pYKbfajIiyl9pPtN-E81gB9XbIQN-58oCzkwBdU3bP08OdOuubjPXx42bWl_GMfLUWn04NTlkSVP1oX-qoixuhd-My1AHD6K9ZWrM2FVRxaewxps5gFH40523HWwKqohYmIo3xe5-m8gxcOeKELXQhWJi7-2ge4nsi9GPz1-idKGoq6Yaf5kjXAZ-wWsALIyJtJ5GtQkxIvgtt0fxbA5ppxGlzfoCzyTtZSRksyPIwvKrVwOB3Nac73"/>
+</div>
+<h3 class="font-h3 text-h3 mb-3">Architex Portfolio</h3>
+<p class="text-on-surface-variant mb-6 flex-grow">A high-end architectural showcase site utilizing headless CMS architecture to deliver lightning-fast loading speeds and flawless SEO.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-primary font-label-sm rounded-full">Next.js</span>
+<span class="px-3 py-1 bg-surface-container text-primary font-label-sm rounded-full">Tailwind</span>
+<span class="px-3 py-1 bg-surface-container text-primary font-label-sm rounded-full">GraphQL</span>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="bg-surface-container-lowest border border-surface-variant p-6 rounded-lg card-lift flex flex-col h-full">
+<div class="aspect-video mb-6 overflow-hidden rounded">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist code editor window showing complex, well-structured TypeScript code. The syntax highlighting uses a refined palette including subtle emerald green tones. Beside the monitor is a cup of coffee on a wooden desk, with soft morning light streaming in. The atmosphere is productive and intellectual, representing the precision of professional software development." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBufL3pxjoIEyEZ9RGMQYITWo7zUqq5XxHWzI0SCz_E19pc380WCZXiufsnACyZu11hbPMNk6l10YudRPBeFA3NBsocXkickDkUselQH6SPnLx3dLhnz0L0DxTdVJ-MWnf_Xl_wAahHEKnbiZhNzVVfYOkJXlKoFLg6MRMBq-juyNH3Vab7_qFbLuAmDRgGGzNcRdFNbmH-8W6FZZOhtEB2VDjN6QcJwjY20tR050l2O3i5H7U9lWpgx_daV934qiCDI7aVXllWP4ni"/>
+</div>
+<h3 class="font-h3 text-h3 mb-3">CoreEngine SDK</h3>
+<p class="text-on-surface-variant mb-6 flex-grow">A developer-first toolkit for building secure decentralized applications, with a heavy focus on type-safety and developer experience.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-primary font-label-sm rounded-full">Rust</span>
+<span class="px-3 py-1 bg-surface-container text-primary font-label-sm rounded-full">WASM</span>
+<span class="px-3 py-1 bg-surface-container text-primary font-label-sm rounded-full">Security</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-section-padding max-w-container-max mx-auto px-8" id="skills">
+<div class="flex flex-col md:flex-row gap-16">
+<div class="md:w-1/3">
+<h2 class="font-h2 text-h2 text-on-surface mb-6">Technical Expertise</h2>
+<p class="text-on-surface-variant font-body-lg">
+                        My skill set is built on a foundation of engineering excellence and creative problem-solving. I prioritize tools that offer scalability and maintainability.
+                    </p>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8">
+<!-- Frontend -->
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined" data-icon="web">web</span>
+<h4 class="font-bold font-label-sm uppercase tracking-widest">Frontend Architecture</h4>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded font-label-sm">React / Next.js</span>
+<span class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded font-label-sm">TypeScript</span>
+<span class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded font-label-sm">Tailwind CSS</span>
+<span class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded font-label-sm">Three.js</span>
+</div>
+</div>
+<!-- Backend -->
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined" data-icon="dns">dns</span>
+<h4 class="font-bold font-label-sm uppercase tracking-widest">Systems &amp; Backend</h4>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded font-label-sm">Node.js</span>
+<span class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded font-label-sm">PostgreSQL</span>
+<span class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded font-label-sm">Redis</span>
+<span class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded font-label-sm">Docker</span>
+</div>
+</div>
+<!-- Design -->
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+<h4 class="font-bold font-label-sm uppercase tracking-widest">Design Systems</h4>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded font-label-sm">Figma</span>
+<span class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded font-label-sm">UI/UX Design</span>
+<span class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded font-label-sm">Motion Design</span>
+</div>
+</div>
+<!-- Tools -->
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<h4 class="font-bold font-label-sm uppercase tracking-widest">Workflow</h4>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded font-label-sm">Git / GitHub</span>
+<span class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded font-label-sm">CI/CD Pipelines</span>
+<span class="px-4 py-2 bg-surface-container-high text-on-surface-variant rounded font-label-sm">Agile Methodology</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-8 flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto border-t border-surface-variant bg-surface-container-low">
+<div class="font-h3 text-h3 text-on-surface mb-6 md:mb-0">Portfolio</div>
+<div class="flex gap-8 mb-6 md:mb-0">
+<a class="text-on-surface-variant hover:text-primary underline transition-all font-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary underline transition-all font-body-md" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary underline transition-all font-body-md" href="mailto:hello@example.com">Email</a>
+</div>
+<div class="text-on-surface-variant text-body-md">
+            © 2024 Personal Portfolio. All rights reserved.
+        </div>
+</footer>
+</body></html>

@@ -1,2 +1,10 @@
 # homepage
-Simple website where I display all my other projects/sites
+
+Next.js App Router homepage for showcasing projects and related sites.
+
+## Run
+
+```bash
+npm install
+npm run dev
+```
