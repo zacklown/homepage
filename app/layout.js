@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { Manrope, Newsreader } from "next/font/google";
 import "./globals.css";
 
@@ -23,7 +24,21 @@ export default function RootLayout({ children }) {
       className={`${manrope.variable} ${newsreader.variable}`}
       data-scroll-behavior="smooth"
     >
-      <body>{children}</body>
+      <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-K77XTR7NHV"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-K77XTR7NHV');
+          `}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }
